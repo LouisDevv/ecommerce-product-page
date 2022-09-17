@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | E-commerce product page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="//unpkg.com/a11y-slider@latest/dist/a11y-slider.css" />
+
+</head>
+
+
+<body class="overflow">
+    <header>
+        <div class="container">
+            <div class="nav-wrapper flex">
+                <div class="logo-list-wrapper flex">
+                    <button class="mobile-nav-toggle">
+                        <img class="icon-menu" src="images/icon-menu.svg" alt="" >
+                        <img class="icon-close" src="images/icon-close.svg" alt="">
+                      </button>
+                    <a href="#"><img src="/images/logo.svg" alt=""></a>
+                    <nav class="primary-navigation">
+                        <ul class="nav-list flex">
+                            <li><a href="#" class="nav-links">Collections</a></li>
+                            <li><a href="#" class="nav-links">Men</a></li>
+                            <li><a href="#" class="nav-links">Women</a></li>
+                            <li><a href="#" class="nav-links">About</a></li>
+                            <li><a href="#" class="nav-links">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="cart-avatar-wrapper flex">
+                    <button id="cart">
+                        <img src="images/icon-cart.svg" alt="" class="nav-links">
+                    </button>
+                    <div class="basket hidden">
+                        <div>
+                            <p class="fw-bold">Cart</p>
+                        </div>
+
+                        <div class="hidden" id="basket-product">
+                            <div class="basket-product">
+                                <img src="/images/image-product-1.jpg" alt="">
+                                <div class="basket-product-info text-neutral-600">
+                                    <p class="line-height">Autumn Limited Edition Sneakers</p>
+                                    <p>$125.00 x <span id="item-no">3</span><span class="fw-bold text-neutral-800" id="sub-total">375.00</span></p>
+                                </div>
+                                <img src="images/icon-delete.svg" alt="" id="remove">
+                            </div>
+                            <div>
+                                <button class="button-orange checkout">
+                                    Checkout
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <p class="fw-bold text-neutral-600 empty">Your cart is empty.</p>
+            
+                    </div>
+                    <img src="images/image-avatar.png" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="even-column container">
+                <div class="products">
+                    <ul class="slider" role="list">
+                        <li>
+                            <img src="images/image-product-1.jpg" alt="" class="currentImage">
+                        </li>
+                        <li>
+                            <img src="images/image-product-2.jpg" alt="" data-invisible="max">
+                        </li>
+                        <li>
+                            <img src="images/image-product-3.jpg" alt="" data-invisible="max">
+                        </li>
+                        <li>
+                            <img src="images/image-product-4.jpg" alt="" data-invisible="max">
+                        </li>
+                    </ul>
+                    <div class="thumbnail-wrapper">
+                        <div class="thumbnail-outline outline"><img src="images/image-product-1-thumbnail.jpg" alt="" class="thumbnail opacity"></div>
+                        <div class="thumbnail-outline"><img src="images/image-product-2-thumbnail.jpg" alt="" class="thumbnail"></div>
+                        <div class="thumbnail-outline"><img src="images/image-product-3-thumbnail.jpg" alt="" class="thumbnail"></div>
+                        <div class="thumbnail-outline"><img src="images/image-product-4-thumbnail.jpg" alt="" class="thumbnail"></div>
+                    </div>
+                </div>
+
+                <div class="lightbox-wrapper">
+                    <div class="products lightbox">
+                        <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg" class="lightbox-close">
+                            <path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#fff" fill-rule="evenodd"/>
+                        </svg>
+                        <ul class="slider lightbox-slider" role="list">
+                            <button class="lightbox-slider-prev">Pev</button>
+                            <li>
+                                <img src="images/image-product-1.jpg" alt="" class="currentImage lightbox-current">
+                            </li>
+                            <li>
+                                <img src="images/image-product-2.jpg" alt="" data-invisible="max">
+                            </li>
+                            <li>
+                                <img src="images/image-product-3.jpg" alt="" data-invisible="max">
+                            </li>
+                            <li>
+                                <img src="images/image-product-4.jpg" alt="" data-invisible="max">
+                            </li>
+                            <button class="lightbox-slider-next">Next</button>
+                        </ul>
+                        <div class="thumbnail-wrapper">
+                            <div class="thumbnail-outline outline"><img src="images/image-product-1-thumbnail.jpg" alt="" class="thumbnail opacity"></div>
+                            <div class="thumbnail-outline"><img src="images/image-product-2-thumbnail.jpg" alt="" class="thumbnail"></div>
+                            <div class="thumbnail-outline"><img src="images/image-product-3-thumbnail.jpg" alt="" class="thumbnail"></div>
+                            <div class="thumbnail-outline"><img src="images/image-product-4-thumbnail.jpg" alt="" class="thumbnail"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-info">
+                    <p class="text-primary-500 fw-bold fs-400 mb-1">SNEAKER COMPANY</p>
+                    <h1 class="fw-bold fs-primary-heading mb-1">Fall Limited Edition Sneakers</h1>
+                    <p class="text-neutral-600 mb-1-5">These low-profile sneakers are your perfect casual wear companion. Featuring a
+                        durable rubber outer sole, they’ll withstand everything the weather can offer.
+                    </p>
+                    <div class="prices mb-1">
+                        <div class="current-price">
+                            <p class="fs-secondary-heading fw-bold ">$125.00</p>
+                            <p class="discount text-primary-500 fs-600 fw-bold">50%</p>
+                        </div>
+                        <p class="original-price fw-bold text-neutral-500">$250.00</p>
+                    </div>
+                 
+                    <div class="pieces-button-wrapper">
+                        <div class="pieces mb-1">
+                            <button id="minus">
+                                <svg class="icon">
+                                    <use xlink:href="images/plus-minus.svg#icon-minus"></use>
+                                </svg>
+                            </button >
+                            <p class="fw-bold" id="no-of-item">0</p>
+                            <button id="plus">
+                                <svg class="icon">
+                                    <use xlink:href="images/plus-minus.svg#icon-plus"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <button class="button-orange mb-1" id="add-to-cart">
+                            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#fff" fill-rule="nonzero"/>
+                            </svg>Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="//unpkg.com/a11y-slider@latest/dist/a11y-slider.js"></script>
+    <script src="main.js"></script>
+</body>
+
+
+
+</html>
